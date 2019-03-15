@@ -2,8 +2,11 @@
 let express = require('express')
 let bodyParser = require('body-parser')
 
-const app = express()
+// call databse
+const {sequelize} = require('./models')
 
+// bodyParser
+const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true})) // rencode เข้ารหัส
 
@@ -64,6 +67,17 @@ app.get('/hello', function(request, response){
  * > node src/app.js
  */
 let port = 8081
+
+// call sequelize
+sequelize.sync({force: false}).then(() => {
+  app.listen(port, function() {
+    console.log('server running on port: ' + port) 
+  })
+})
+
+// Original not call sequelize
+/* 
 app.listen(port, function(){
   console.log('server running on port: ' + port) 
-})
+})  
+*/

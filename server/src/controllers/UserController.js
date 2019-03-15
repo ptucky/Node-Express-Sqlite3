@@ -15,11 +15,6 @@ module.exports = {
       response.send({
         error: response.status
       })
-     /*  
-      response.status(500).send({
-        error: response.status
-      }) 
-      */
     }
   },
 

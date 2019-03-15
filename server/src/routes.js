@@ -10,9 +10,10 @@ module.exports = (app) => {
   // Delete - user
   app.delete('/user/:userId', UserController.remove)
 
+  // Get - all user
+  app.get('/users', UserController.index)
+
   // Get - user by id
   app.get('/user/:userId', UserController.showId)
 
-  // Get - all user
-  app.get('/users', UserController.index)
 }

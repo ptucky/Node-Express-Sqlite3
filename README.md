@@ -1,7 +1,6 @@
 # ฝึก node + Express + sqlite3
 node (BackEnd)
 
-
 ## ต้องเข้าไปติดตั้งใน Folder node-backend/server
 ```Terminal
   > cd node-backend/server
@@ -28,3 +27,8 @@ node (BackEnd)
 
 ## download SQLiteStudio 
 ## เปิด Postman ทดสอบ
+
+#### มี synchronize กับ asynchronize
+* CRUD + DB Sqlite3
+* * try catch
+* * async กับ await

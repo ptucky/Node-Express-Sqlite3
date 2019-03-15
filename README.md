@@ -1,4 +1,4 @@
-# node + Express + sqlite3
+# ฝึก node + Express + sqlite3
 node (BackEnd)
 
 
@@ -26,5 +26,5 @@ node (BackEnd)
   > npm install --save sequelize
 ```
 
-## download SQLiteStudio สำหรับดู IDE ดู database
-## เปิด Postman  
+## download SQLiteStudio 
+## เปิด Postman ทดสอบ

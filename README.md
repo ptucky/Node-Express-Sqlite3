@@ -1,9 +1,32 @@
-# ฝึก node + Express + sqlite3
-node (BackEnd)
+Json use javascript manage data
+
+## Install Node
+https://nodejs.org/en/
+เมื่อเราทําการติดต้ังโปรแกรม nodejs ลงในเคร่ืองคอมพิวเตอร1ของเรา มันจะทํา การติดต้ัง npm มาให'เราด'วย
+
+## Check version
+> node -v
+  v10.15.1
+
+> npm -v
+  6.4.1
+
+
+## Run node server
+> node server
+  or
+> node app.js
+
+
+## Folder Array ใน JSON array
+- array push
+- array splice = เลือกช่วง Array ใน JSON array มาใช้งาน (splice)
+- array slice = คือการตัดอะเรย1 หรือเลือก array ในช่วงท่ีเราต้องการมาแสดงผล หรือ ลบช่วง array ท่ีเราเลือกออกจาก json
+- delete
 
 ## ต้องเข้าไปติดตั้งใน Folder node-backend/server
 ```Terminal
-  > cd node-backend/server
+  > cd node-backend.git/server
 ```
   
 ## ติดตั้ง express
@@ -25,10 +48,17 @@ node (BackEnd)
   > npm install --save sequelize
 ```
 
-## download SQLiteStudio 
-## เปิด Postman ทดสอบ
+## download SQLiteStudio สำหรับดู IDE ดู database
+## เปิด Postman  
 
-#### มี synchronize กับ asynchronize
-* CRUD + DB Sqlite3
-* * try catch
-* * async กับ await
+####### Git #######
+commit 
+1. git add --all
+2. git commit -m 'any message'
+3. git push
+or 
+3. git force push or 3. git push force
+
+####### Sqlite Query ########
+http://docs.sequelizejs.com/manual/querying.html
+http://docs.sequelizejs.com/manual/models-usage.html

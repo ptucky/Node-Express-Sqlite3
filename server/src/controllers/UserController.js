@@ -14,6 +14,7 @@ module.exports = {
         }
       })
       response.send(users)
+
       //response.send(JSON.stringify(users))
       //reqsponse.send(users.toJSON()) // Not work
 
@@ -28,12 +29,16 @@ module.exports = {
   async showId (request, response){
     //response.send('Show user by id: ' + request.params.userId)
     try {
-      
-      // not work
-      const user = await User.findById(request.params.userId)
-      reqsponse.send(user.toJSON())
-      //reqsponse.send(user.toJSON())
 
+      const users = await User.findAll({
+        attributes: ['id', 'name','lastname',['email', 'e-mail'],'status'],
+        where: {
+          status: 'A',
+          id: request.params.userId
+        }
+      })
+      response.send(users)
+      
     } catch (err) {
       response.send({
         error: response.status

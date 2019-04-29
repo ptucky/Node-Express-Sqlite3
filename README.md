@@ -2,7 +2,32 @@ Json use javascript manage data
 
 ## Install Node
 https://nodejs.org/en/
-เมื่อเราทําการติดต้ังโปรแกรม nodejs ลงในเคร่ืองคอมพิวเตอร1ของเรา มันจะทํา การติดต้ัง npm มาให'เราด'วย
+เมื่อเราทําการติดต้ังโปรแกรม nodejs ลงในเคร่ืองคอมพิวเตอร1ของเรา มันจะทํา การติดต้ัง npm มาให'เราด'ว
+
+## Install Git
+หากราไม่มีโปรแกรม git ในเครื่องเรา สามารถทําการ download ได้จาก https://git-scm.com/ จากนั้นทําการ download และติดตั้ง ตาม OS ท่ีเราใช้งาน
+
+## Check version
+> node -v
+  v10.15.1
+
+> npm -v
+  6.4.1
+
+  if need update npm 
+  > sudo npm install -g npm
+
+> git --version
+  git version 2.21.0
+
+> vue --version
+  3.6.3
+
+  if no vue-cli then install it
+  > sudo npm install -g @vue/cli
+  or 
+  > sudo npm install -g @vue/cli-init
+
 
 ## Check version
 > node -v
@@ -13,9 +38,17 @@ https://nodejs.org/en/
 
 
 ## Run node server
-> node server
+- root 
+  > node server
   or
-> node app.js
+- root 
+  > node app.js
+  or
+- cd inside folder that contain app.js
+  > cd server
+  > node src/app.js 
+
+เวลาแก้ไขอะไรและ save ก้ restart service ด้วยมันจะได้เปลี่ยน
 
 
 ## Folder Array ใน JSON array
@@ -62,3 +95,36 @@ or
 ####### Sqlite Query ########
 http://docs.sequelizejs.com/manual/querying.html
 http://docs.sequelizejs.com/manual/models-usage.html
+
+
+
+
+
+
+## วิธีสร้าง Project ปกติทั่วไป
+## ใช้ vue-cli สร้าง Project ## source: https://cli.vuejs.org/
+
+  # Install vue-cli version 3 (create project from command to browser)
+
+  > sudo npm install -g @vue/cli
+  # OR
+  > sudo yarn global add @vue/cli
+
+  # 1. Create a project as command:
+  > vue create my-project
+  > cd my-project/
+
+  > npm run serve
+  or 
+  > node server
+
+
+  # 2. Run UI browser to create project
+  > vue ui
+
+
+  # ทำเองเพิ่มเติม ##
+  - การสร้างโปรเจคจาก vue-cli 3
+  - UI ใช้ vuetify เป็น material theme
+  - SSR ใช้ NUXT.js
+  - Vuex จัดการ state management (State/props) 

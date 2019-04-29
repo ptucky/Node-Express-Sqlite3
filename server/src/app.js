@@ -13,40 +13,7 @@ app.use(bodyParser.urlencoded({extended: true})) // rencode เข้ารห�
 // Call route.js
 require('./routes')(app)
 
-// * Comment it and move to use in 
-// * UserController.js + route.js
-// * ใฟ้เป็นระเบียบขึ้น
-
-/*
-// Get - user by id
-app.get('/user/:userId', function(request, response){
-  response.send('Show user by id: ' + request.params.userId)
-})
-
-// Get - all user
-app.get('/users', function(request, response){
-  response.send('Show all User')
-})
-
-// JSON.stringify คือ การแปล JSON ให้เป็น String
-
-// Create - user
-app.post('/user/', function (request, response) {
-  response.send('Create user: ' + JSON.stringify(request.body))
-})
-
-// Edit - user
-app.put('/user/:userId', function (request, response) {
-  response.send('Edit user: ' + request.params.userId + ' : ' + JSON.stringify(request.body))
-})
-
-// Delete - user
-app.delete('/user/:userId', function (request, response) {
-  response.send('Delete user: ' + request.params.userId)
-})
- */
-
- // type url http://localhost:8081/status
+// type url http://localhost:8081/status
 app.get('/status', function (request, response) {
   response.send('Nodejs server status')
 })
@@ -60,6 +27,39 @@ app.get('/hello/:person', function(request, response){
 app.get('/hello', function(request, response){
   response.send('OK Hello ')
 })
+
+/*
+  // * Comment it and move to use in 
+  // * UserController.js + route.js
+  // * ให้เป็นระเบียบขึ้น
+
+  // Get - user by id
+  app.get('/user/:userId', function(request, response){
+    response.send('Show user by id: ' + request.params.userId)
+  })
+
+  // Get - all user
+  app.get('/users', function(request, response){
+    response.send('Show all User')
+  })
+
+  // JSON.stringify คือ การแปล JSON ให้เป็น String
+
+  // Create - user
+  app.post('/user/', function (request, response) {
+    response.send('Create user: ' + JSON.stringify(request.body))
+  })
+
+  // Edit - user
+  app.put('/user/:userId', function (request, response) {
+    response.send('Edit user: ' + request.params.userId + ' : ' + JSON.stringify(request.body))
+  })
+
+  // Delete - user
+  app.delete('/user/:userId', function (request, response) {
+    response.send('Delete user: ' + request.params.userId)
+  })
+*/
 
 
 /**
@@ -75,7 +75,7 @@ sequelize.sync({force: false}).then(() => {
   })
 })
 
-// Original not call sequelize
+// Original not use call sequelize
 /* 
 app.listen(port, function(){
   console.log('server running on port: ' + port) 

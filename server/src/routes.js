@@ -14,7 +14,7 @@ module.exports = (app) => {
   app.get('/users', UserController.index)
 
   // Get - all user
-  app.get('/', UserController.index)  
+   app.get('/', UserController.index)  
 
   // Get - user by id
   app.get('/user/:userId', UserController.showId)

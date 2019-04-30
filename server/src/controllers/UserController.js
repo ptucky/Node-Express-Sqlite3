@@ -1,14 +1,19 @@
+// Call all file from Models folder
 const {User} = require('../models')
 
 module.exports = {
-  
-  // Get - all user
+
+  /**
+   * Get - all user
+   * @param {*} request 
+   * @param {*} response 
+   */
   async index (request, response){
     //response.send('Show all User')
     try {
       
       const users = await User.findAll({
-        attributes: ['id', 'name','lastname',['email', 'e-mail'],'status'],
+        attributes: ['id', 'name','lastname',['email', 'e_mail'],'status'],
         where: {
           status: 'A'
         }
@@ -16,7 +21,7 @@ module.exports = {
       response.send(users)
 
       //response.send(JSON.stringify(users))
-      //reqsponse.send(users.toJSON()) // Not work
+      //reqsponse.send(users.toJSON())
 
     } catch (err) {
       response.send({
@@ -25,7 +30,12 @@ module.exports = {
     }
   },
 
-  // Get - user by id
+
+  /**
+   * Get - user by id
+   * @param {*} request 
+   * @param {*} response 
+   */
   async showId (request, response){
     //response.send('Show user by id: ' + request.params.userId)
     try {
@@ -51,7 +61,12 @@ module.exports = {
     }
   },
   
-  // Create - user
+
+  /**
+   * Create - user
+   * @param {*} request 
+   * @param {*} response 
+   */
   async create (request, response) {
     //response.send('Create user: ' + JSON.stringify(request.body))
     try {
@@ -66,7 +81,12 @@ module.exports = {
     }
   },
 
-  // Edit - user, suspend, active
+ 
+  /**
+   * Edit - user, suspend, active
+   * @param {*} request 
+   * @param {*} response 
+   */
   async put (request, response) {
     //response.send('Edit user: ' + request.params.userId + ' : ' + JSON.stringify(request.body))
     try {
@@ -85,7 +105,12 @@ module.exports = {
     }
   },
 
-  // Delete - user
+
+  /**
+   * Delete - user
+   * @param {*} request 
+   * @param {*} response 
+   */
   async remove (request, response) {
     //response.send('Delete user: ' + request.params.userId)
     try {

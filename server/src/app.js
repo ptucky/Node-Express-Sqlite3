@@ -1,16 +1,16 @@
 // Start
 let express = require('express')
 let bodyParser = require('body-parser')
-
-// call databse
-const {sequelize} = require('./models')
+let cors = require('cors')                        // call CORS package
+const {sequelize} = require('./models')           // call databse
 
 // bodyParser
 const app = express()
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended: true})) // rencode เข้ารหัส
+app.use(bodyParser.urlencoded({extended: true}))  // rencode เข้ารหัส
+app.use(cors())
 
-// Call route.js
+// Call routes.js (src/routes.js)
 require('./routes')(app)
 
 // type url http://localhost:8081/status

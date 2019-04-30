@@ -40,7 +40,7 @@ module.exports = {
     //response.send('Show user by id: ' + request.params.userId)
     try {
 
-      const users = await User.findAll({
+      const users = await User.findOne({
         attributes: ['id', 'name','lastname',['email', 'e_mail'],'status'],
         where: {
           status: 'A',

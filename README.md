@@ -186,7 +186,7 @@ https://github.com/standard/standard
       
       },
       methods: {
-        
+
       }
     }
   </script>
@@ -235,5 +235,20 @@ this will disable linting for everything below it
 - link route (รูท)
   this.$route
 
--
-/** creted คล้าย เริ่มต้น document.ready() */
+# Permission (token) Node Server
+- ทำการ สร้างและส่ง Token จาก node server ไปให้ Vue Frontend
+- ติดตั้ง package on "server" side 
+  open package.json add these more in dependencie
+  ```
+    "bcrypt-nodejs": "^0.0.3", 
+    "bluebird": "^3.5.3", 
+    "joi": "^13.7.0", 
+    "jsonwebtoken": "^8.4.0", 
+    "passport": "^0.4.0", 
+    "passport-jwt": "^4.0.0"
+  ```
+  
+  stop server and run 
+  > npm install
+
+- สร้าง UserAuthenController.js ขึ้นมาจัดการเรื่องน้ี โดยเฉพาะ

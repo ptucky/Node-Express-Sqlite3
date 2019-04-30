@@ -204,3 +204,11 @@ this will disable linting for everything below it
   1. create Folder name "services"
   2. create file name "Api.js" 
   3. it will be src/services/Api.js 
+
+# tips
+- link router (เราเตอร์)
+  this.$router.push('URL')
+
+- link route (รูท)
+  this.$route
+

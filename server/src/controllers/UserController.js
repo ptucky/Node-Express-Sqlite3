@@ -41,7 +41,7 @@ module.exports = {
     try {
 
       const users = await User.findAll({
-        attributes: ['id', 'name','lastname',['email', 'e-mail'],'status'],
+        attributes: ['id', 'name','lastname',['email', 'e_mail'],'status'],
         where: {
           status: 'A',
           id: request.params.userId

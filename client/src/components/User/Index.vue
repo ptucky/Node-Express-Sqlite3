@@ -1,12 +1,14 @@
 <template>
   <div>
     <h1>Get All Users</h1>
-    <div v-if="users.length">
-      <div>No. User: {{ users.length }}</div>
-      <div>ID: {{ users[0].id }}</div>
-      <div>Name: {{ users[0].name }} {{ users[0].lastname }}</div>
-      <div>Email: {{ users[0].e_mail }}</div>
-      <div>Status: {{ users[0].status }}</div>
+    <h4>No. User: {{ users.length }}</h4>
+    <div v-for="user in users" v-bind:key="user.id">
+      <p>ID: {{ user.id }}</p>
+      <p>Name: {{ user.name }} {{ user.lastname }}</p>
+      <p>Email: {{ user.e_mail }}</p>
+      <p>Status: {{ user.status }}</p>
+      <p><button v-on:click="navigateTo('/user/' + user.id)">View User</button></p>
+      <hr />
     </div>
   </div>
 </template>
@@ -25,22 +27,27 @@ export default {
   }
   */
   /** 2. Reformat code using import UserService */
+  /**
+  ถ้า users อยู่ใน tag script ใช้ this.users เสมอ
+  แต่ถ้า users อยู่ใน tag template หรือ html ใช้  {{ users }}
+  */
   data () {
     return {
       users: []
     }
   },
   async created () {
-    /**
-      ถ้า users อยู่ใน tag script ใช้ this.users เสมอ
-      แต่ถ้า users อยู่ใน tag template หรือ html ใช้  {{ users }}
-     */
-    this.users = (await UserService.index()).data
-    console.log(this.users)
-    /*
-    let result = (await UserService.index()).data
-    console.log(result)
-    */
+    /** creted () เริ่มต้น */
+    try {
+      this.users = (await UserService.index()).data
+    } catch (error) {
+      console.log(error)
+    }
+  },
+  methods: {
+    navigateTo (route) {
+      this.$router.push(route)
+    }
   }
 }
 </script>

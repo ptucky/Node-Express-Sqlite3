@@ -2,7 +2,7 @@
   <div>
     <h1>Get User By Id</h1>
     <div v-if="user.length">
-      <p>ID: {{ user }}</p>
+      <p>{{ user }}</p>
       <p>ID: {{ user[0].id }}</p>
       <p>Name: {{ user[0].name }} {{ user[0].lastname }}</p>
       <p>Email: {{ user[0].e_mail }}</p>

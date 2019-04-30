@@ -172,6 +172,29 @@ https://github.com/standard/standard
 
 ### Vue + Node ###
 
+# Basic standdard code in .vue
+
+```js
+  <template>
+    <div>
+      <h1>Create User</h1>
+    </div>
+  </template>
+  <script>
+    export default {
+      async created () {
+      
+      },
+      methods: {
+        
+      }
+    }
+  </script>
+  <style scoped>
+  </style>
+```
+
+
 # Linter
 - Lint / enable + disable
 this will disable linting for everything below it
@@ -212,3 +235,5 @@ this will disable linting for everything below it
 - link route (รูท)
   this.$route
 
+-
+/** creted คล้าย เริ่มต้น document.ready() */

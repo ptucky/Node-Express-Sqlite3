@@ -8,6 +8,7 @@
       <p>Email: {{ user.e_mail }}</p>
       <p>Status: {{ user.status }}</p>
       <p><button v-on:click="navigateTo('/user/' + user.id)">View User</button></p>
+      <p><button v-on:click="navigateTo('/user/edit/' + user.id)">Edit User</button></p>
       <hr />
     </div>
   </div>

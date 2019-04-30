@@ -34,7 +34,7 @@ export default {
         this.user_data[0].email = this.user_data[0].e_mail
         await UserService.put(this.user_data[0])
         this.$router.push({
-          name: 'users'
+          name: 'users' /** redirect to /users */
         })
       } catch (error) {
         console.log(error)

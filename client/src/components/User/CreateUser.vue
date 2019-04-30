@@ -8,6 +8,7 @@
       <p>Password: <input type="text" v-model="user_data.password"></p>
       <p><button type="submit">Create</button></p>
     </form>
+    <p><button v-on:click="navigateTo('/users')">Cancel</button></p>
     <hr />
     <div>
       <p>Name: {{ user_data }}</p>
@@ -34,11 +35,14 @@ export default {
       try {
         await UserService.post(this.user_data)
         this.$router.push({
-          name: 'users'
+          name: 'users' /** redirect to /users */
         })
       } catch (error) {
         console.log(error)
       }
+    },
+    navigateTo (route) {
+      this.$router.push(route)
     }
   }
 }
